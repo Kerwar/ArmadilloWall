@@ -30,3 +30,19 @@ TEST_CASE("Interval equals", "Interval")
   CHECK(interval1 != interval2);
   CHECK(interval2 == interval3);
 }
+
+TEST_CASE("Value is in interval", "Interval")
+{
+  Interval<double> interval(3,10);
+  double v1 = 1;
+  double v2 = 3;
+  double v3 = 6;
+  double v4 = 10;
+  double v5 = 10.0001;
+
+  CHECK(!interval.in(v1));
+  CHECK(interval.in(v2));
+  CHECK(interval.in(v3));
+  CHECK(interval.in(v4));
+  CHECK(!interval.in(v5));
+}
