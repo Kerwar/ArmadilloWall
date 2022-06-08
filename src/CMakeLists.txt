@@ -7,7 +7,7 @@ include_directories(${MPI_INCLUDE_PATH})
 include_directories("../src")
 include_directories("../inc")
 
-SET(SOURCES main.cpp)
+SET(SOURCES main.cpp grid.cpp equals.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} ${MPI_LIBRARIES})

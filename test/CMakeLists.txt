@@ -8,7 +8,8 @@ include_directories(${MPI_INCLUDE_PATH})
 include_directories("../src")
 include_directories("../inc")
 
-SET(SOURCES testGrid.cpp testInterval.cpp testRectangle.cpp ../src/equals.cpp)#test.cpp testField.cpp testGrid.cpp)
+SET(PROGRAM_SOURCES ../src/equals.cpp ../src/grid.cpp)
+SET(SOURCES ${PROGRAM_SOURCES} testGrid.cpp testInterval.cpp testRectangle.cpp )#test.cpp testField.cpp testGrid.cpp)
 
 add_executable(tests ${SOURCES} ) 
 

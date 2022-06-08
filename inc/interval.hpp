@@ -12,10 +12,10 @@ struct Interval {
   T imin_, imax_;
 
  public:
-  constexpr T imin() const { return imin_; };
-  constexpr T imax() const { return imax_; };
-  constexpr bool in(const T &v) const { return imin_ <= v && v <=imax_; };
-  constexpr T length() const { return imax_ - imin_; };
+  inline T imin() const { return imin_; };
+  inline T imax() const { return imax_; };
+  inline bool in(const T &v) const { return imin_ <= v && v <=imax_; };
+  inline T length() const { return imax_ - imin_; };
 
   friend inline bool operator==(const Interval<T> &lhs, const Interval<T> &rhs) {return equals(lhs.imin(), rhs.imin()) &&  equals(lhs.imax(), rhs.imax());};
   friend inline bool operator!=(const Interval<T> &lhs, const Interval<T> &rhs) {return !(lhs==rhs);};
