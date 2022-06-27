@@ -9,7 +9,7 @@ include_directories("../src")
 include_directories("../inc")
 
 file(GLOB PROGRAM_SOURCES "../src/*.cpp")
-SET(SOURCES ${PROGRAM_SOURCES} testParalel.cpp testGrid.cpp testInterval.cpp testRectangle.cpp )
+SET(SOURCES ${PROGRAM_SOURCES} testParalel.cpp testGrid.cpp testInterval.cpp testRectangle.cpp testDomain.cpp)
 
 add_executable(tests ${SOURCES} ) 
 

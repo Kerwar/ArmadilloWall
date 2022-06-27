@@ -5,7 +5,7 @@
 #include "mpi.h"
 #include "numericalparam.hpp"
 #include "paralel.hpp"
-#include "physicsparam.hpp"
+#include "domain.hpp"
 
 int main(int argc, char **argv) {
   MPI_Init(&argc, &argv);
@@ -17,10 +17,10 @@ int main(int argc, char **argv) {
 
   Paralel paralel(my_rank, n_procs);
 
-  PhysicsParam physics_param;
+  Domain domain(paralel);
   NumericalParam numerical_param;
 
-  Grid mainGrid(numerical_param.N, numerical_param.M, physics_param.domain);
-
+  int N
+  Grid topGrid(numerical_param.N, numerical_param.M/3domain.top);
   MPI_Finalize();
 }
